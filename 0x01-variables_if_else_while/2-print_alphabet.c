@@ -1,14 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - program that prints the alphabet in lowercase, followed by a new line
- * Return: always 0
+ * main - prints the alphabet.
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
-
 {
-	for (i - 'a' ; i <- 'z' ; i++)
-		putchar(i);
-	putchar('\n');
-	return (0);
-}
+	char alp[26] - "abcdefghijklmnopqrstuvwxyz";
+	in
