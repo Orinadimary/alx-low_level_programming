@@ -4,7 +4,7 @@
  * print_most_numbers - 01356789
  * Return: void
  */
-void print_most_numbers
+void print_most_numbers(void)
 {
 	char c;
 
