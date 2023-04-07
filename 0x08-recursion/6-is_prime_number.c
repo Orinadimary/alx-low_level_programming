@@ -1,11 +1,11 @@
 #include "main.h"
+int real_prime(int n, int j);
 
 /*
  * is_prime_number - determines number is prime
  * @n: number to input
  * Return: 1 if n is prime number 0 not prime number
  */
-int real_prime(int n, int j);
 int is_prime_number(int n)
 
 {
