@@ -3,11 +3,12 @@
 #include <stdlib.h>
 
 /**
- * str_concat - allocates memory to new pointer
+ * _strdup - function that allocates memory to new pointer
  * @str: char
  * Return: NULL
  */
 char *_strdup(char *str)
+
 {
 	char *jjj;
 
