@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * wildcmp - compare two strings
- * @s1: input string character
- * @s2: input string character
- * Return: 1 if identical, 0 not identical
- */
+* wildcmp - compare two strings
+* @s1: input string character
+* @s2: input string character
+* Return: 1 if identical, 0 not identical
+*/
 int wildcmp(char *s1, char *s2)
 {
 	if (*s1 == '\0')
