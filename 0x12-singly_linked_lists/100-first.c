@@ -3,7 +3,7 @@
 void first(void) __attribute__ ((constructor));
 
 /**
- * first -  function that prints main function is executed 
+ * first - function that prints main function is executed
  */
 void first(void)
 {
