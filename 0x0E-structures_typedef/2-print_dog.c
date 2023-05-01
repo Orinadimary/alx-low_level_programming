@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include "dog.h"
+#include <stdlib.h>
 
 /**
- * print_dog -  function that prints a struct dog
- * @d - to be printed
- */
+* print_dog -  function that prints a struct dog
+* @d: to be printed
+*
+*/
 void print_dog(struct dog *d)
 {
 	if (d != NULL)
