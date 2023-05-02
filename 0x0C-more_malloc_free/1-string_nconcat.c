@@ -24,6 +24,7 @@ else
 	s = malloc(sizeof(char) * (len1 + len2 + 1));
 if (!s)
 	return (NULL);
+while (a < len1)
 {
 		s[a] = s1[a];
 a++;
