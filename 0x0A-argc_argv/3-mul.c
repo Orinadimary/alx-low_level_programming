@@ -8,23 +8,25 @@
  */
 int _atoi(char *s)
 {
-	int a, c, len, d, digit;
+	int a, b, c, len, d, digit;
 
 	a = 0;
+	b = 0;
 	c = 0;
 	len = 0;
 	d = 0;
 	digit = 0;
+
 	while (s[len] != '\0')
 		len++;
 	while (a < len && d == 0)
 	{
 		if (s[a] == '-')
-			++d;
+			++b;
 		if (s[a] >= '0' && s[a] <= '9')
 		{
 			digit = s[a] - '0';
-			if (d % 2)
+			if (b % 2)
 				digit = -digit;
 			c = c * 10 + digit;
 			d = 1;
@@ -36,7 +38,7 @@ int _atoi(char *s)
 	}
 	if (d == 0)
 		return (0);
-	return (a);
+	return (c);
 }
 /**
  * main - multiplies two numbers
