@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#define ERR_MSG "Error"
 /**
  * is_digit - a string contains a non-digit char
  * @s: pointer to the string
