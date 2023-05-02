@@ -2,13 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-int is_digit(char *s)
 /**
  * is_digit - a string contains a non-digit char
  * @s: pointer to the string
  * Return:0 if non-digit, 1 not
  */
+int is_digit(char *s)
 {
 	int n = 0;
 
