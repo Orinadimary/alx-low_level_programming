@@ -4,26 +4,26 @@
 
 /**
  * read_textfile - function that reads a text file and prints it to the POSIX
- * @filename: text to be read
- * @letters: letters to be read
+ * @filename: number of letters it should read and print
+ * @letters: letters to be read and written
  * Return: actual number of letters it could read and print
- * is NULL return 0
+ * if filename is NULL return 0
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-char *buf;
-ssize_t fd;
-ssize_t w;
-ssize_t t;
+	char *n;
+	ssize_t i;
+	ssize_t x;
+	ssize_t y;
 
-fd = popen(filename, O_RDONLY);
-if (fd == -1)
-return (0);
-buf = malloc(sizeof(char) * letters);
-t = fread(fd, buf, letters);
-w = fwrite(STDOUT_FILENO, buf, t);
+	i = open(filename, O_RDONLY);
+	if (i == -1)
+		return (0);
+	n = malloc(sizeof(char) * letters);
+	y = read(i, n, letters);
+	x = write(STDOUT_FILENO, n, y);
 
-free(buf);
-close(fd);
-return (w);
+	free(n);
+	close(i);
+	return (x);
 }
