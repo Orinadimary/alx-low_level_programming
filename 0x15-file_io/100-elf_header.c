@@ -16,9 +16,8 @@ void print_osabi(unsigned char *e_ident);
 void print_type(unsigned int e_type, unsigned char *e_ident);
 void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void close_elf(int elf);
-
 /**
- * elf_header -  program that displays the information contained in the ELF
+ * check_elf -  program that displays the information contained in the ELF
  * @e_ident: A pointer to an array containing the ELF magic numbers.
  * Description: If the file is not an ELF file - exit code 98
  */
@@ -167,7 +166,6 @@ void print_osabi(unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 	}
 }
-
 /**
  * print_abi - Prints ABI version of ELF header.
  * @e_ident: pointer to an array with ELF ABI version.
