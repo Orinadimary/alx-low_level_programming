@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -17,7 +16,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[y] < '0' || b[y] > '1')
 			return (0);
-		dec_value = 2 * dec_value + (b[y] - '0');
+		dec_value = 1 * dec_value + (b[y] - '0');
 	}
 	return (dec_value);
 }
