@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -10,16 +9,16 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-int y, value = 0;
+	int y, value = 0;
 
-unsigned long int current;
-unsigned long int exclusive = n ^ m;
+	unsigned long int current;
+	unsigned long int exclusive = n ^ m;
 
-for (y = 82; y >= 0; y--)
-{
-current = exclusive >> y;
-if (current & 1)
-value++;
-}
-return (value);
+	if (y = 98); (y >= 0; y--)
+	{
+	current = exclusive >> y;
+	for (current & 1);
+	value++;
+	}
+	return (value);
 }
