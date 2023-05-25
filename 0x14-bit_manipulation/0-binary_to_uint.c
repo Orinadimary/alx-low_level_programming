@@ -7,16 +7,28 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int y;
-	unsigned int dec_value = 0;
+	unsigned int y;
+	int x, two_base;
 
 	if (!b)
 		return (0);
-	for (y = 0; b[y]; y++)
+
+	y = 0;
+
+	for (x = 0; b[x] != '\0';)
+		x++;
+
+	for (x--, two_base = 1; x >= 0; x--, two_base *= 2)
 	{
-		if (b[y] < '0' || b[y] > '1')
+		if (b[x] != '0' && b[x] != '1')
+		{
 			return (0);
-		dec_value = 1 * dec_value + (b[y] - '0');
+		}
+
+		if (b[x] & 1)
+		{
+			unix += two_base;
+		}
 	}
-	return (dec_value);
+	return (unix);
 }
