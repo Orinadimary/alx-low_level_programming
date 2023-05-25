@@ -27,8 +27,8 @@ unsigned int binary_to_uint(const char *b)
 
 		if (b[x] & 1)
 		{
-			unix += two_base;
+			y += two_base;
 		}
 	}
-	return (unix);
+	return (y);
 }
