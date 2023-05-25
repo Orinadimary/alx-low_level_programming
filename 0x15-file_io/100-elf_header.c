@@ -62,7 +62,7 @@ void print_magic(unsigned char *e_ident)
  */
 void print_class(unsigned char *e_ident)
 {
-	printf("Class");
+	printf("  Class:                             ");
 		switch (e_ident[EI_CLASS])
 		{
 			case ELFCLASSNONE:
@@ -101,7 +101,6 @@ void print_data(unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
-
 /**
  * print_version - Prints the version of ELF header.
  * @e_ident: pointer to an array with ELF version.
@@ -121,7 +120,6 @@ void print_version(unsigned char *e_ident)
 		break;
 	}
 }
-
 /**
  * print_osabi - Prints the OS/ABI of ELF header.
  * @e_ident: pointer to an array with the ELF version.
@@ -175,7 +173,6 @@ void print_abi(unsigned char *e_ident)
 	printf("  ABI Version:                       %d\n",
 	       e_ident[EI_ABIVERSION]);
 }
-
 /**
  * print_type - Prints type of ELF header.
  * @e_type: ELF type
@@ -209,7 +206,6 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_type);
 	}
 }
-
 /**
  * print_entry - Prints entry point of ELF header.
  * @e_entry: address to ELF entry point
@@ -217,7 +213,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
  */
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
-	printf("Entry point address:");
+	printf("  Entry point address:               ");
 
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
@@ -232,7 +228,6 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 	else
 		printf("%#lx\n", e_entry);
 }
-
 /**
  * close_elf - Closes an ELF file.
  * @elf: descriptor of the file
@@ -247,7 +242,6 @@ void close_elf(int elf)
 		exit(98);
 	}
 }
-
 /**
  * main - Displays information in the ELF header file at the start
  * @argc: number of arguments in the program.
@@ -282,7 +276,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
-
 	check_elf(header->e_ident);
 	printf("ELF Header:\n");
 	print_magic(header->e_ident);
@@ -293,7 +286,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_abi(header->e_ident);
 	print_type(header->e_type, header->e_ident);
 	print_entry(header->e_entry, header->e_ident);
-
 	free(header);
 	close_elf(m);
 	return (0);
