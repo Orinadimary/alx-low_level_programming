@@ -8,7 +8,7 @@
  * @h: pointer to the linked lists
  * Return: ellements in h
  */
-size_t list_len(const list_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	size_t i = 0;
 
