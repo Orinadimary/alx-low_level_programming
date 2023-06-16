@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * list_len -  function that returns the number of elements
+ * dlistint_len -  function that returns the number of elements
  * @h: pointer to the linked lists
  * Return: ellements in h
  */
