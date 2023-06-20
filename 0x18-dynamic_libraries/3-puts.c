@@ -1,14 +1,23 @@
 #include "main.h"
 #include<stdio.h>
-void _puts(char *str)
 /**
  * _puts - inputs values to script
- * main - Entry point
- *
+ * char - Entry point
+ *@s: pointer
  * Return: Always 0 (Success)
  */
-int main(void)
+void _puts(char *str)
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+	int count = 0;
+
+	while (count >= 0)
+	{
+		if (str[count] == '\0')
+		{
+			_putchar('\n');
+			break;
+		}
+		_putchar(str[count]);
+		count++;
+	}
 }
