@@ -6,24 +6,24 @@
 /**
  * add_dnodeint - function that adds a new node at the beginning
  * @head: pointer
- * @str: pointer
+ * @n: integer to be added
  * Return: new element or NULL
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-        list_t *new;
+        dlistin_t *new_node;
 
-        unsigned int len = 0;
+	new_node = malloc(sizeof(dlistint_t));
+	if (new_node == NULL)
+		return (NULL);
 
-        while (str[len])
-                len++;
-        new = malloc(sizeof(dlist_t));
-        if (!new)
-                return (NULL);
-        new->str = strdup(str);
-        new->len = len;
-        new->next = (*head);
-        (*head) = new;
+	new_node->n = n;
+	new_node->prev = NULL;
+	new_node->next = *head;
 
-        return (*head);
-}                   
+	if (*head != NULL)
+		(*head)->prev = new_node;
+
+	*head = new_node;
+	return (new_node);
+}
