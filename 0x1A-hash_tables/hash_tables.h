@@ -1,5 +1,5 @@
-#ifndef "HASH_TABLES_H"
-#define "HASH_TABLES_H"
+#ifndef __HASH_TABLE_H__
+#define __HASH_TABLE_H__
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -37,4 +37,4 @@ char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
 
-#endif /*HAS_TABLES_H*/
+#endif /*__HASH_TABLES_H__*/
